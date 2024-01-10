@@ -45,7 +45,7 @@ namespace Api1.Controllers
             try
             {
                 oProducto = _dbcontext.Productos.Include(c => c.oCategoria).Where(p => p.IdProducto == idProducto).FirstOrDefault();
-                return StatusCode(StatusCodes.Status200OK, new { mensaje = "ok", response = oProducto });
+                return StatusCode(StatusCodes.Status200OK, new { mensaje = "Ok", response = oProducto });
             }
             catch (Exception ex)
             {
